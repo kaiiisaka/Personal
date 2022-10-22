@@ -1,13 +1,25 @@
 import React from 'react';
-import {Nav, Navbar, Button} from "react-bootstrap";
+import {Nav, Navbar, Button, Container} from "react-bootstrap";
 import {Link} from "react-router-dom"
+import styled from 'styled-components'
+
+const Styles = styled.div `
+  a, .navbar-brand, .navbar-nav nav-link{
+    color: #adb1b8;
+    &:hover{
+      color: azure;
+      text-decoration: none;
+    }
+  }
+`
 
 const NavBar = () => {
 
     return (
-        <div>
+        <Styles>
             <Navbar collapseOnSelect expand = "lg" bg = "dark" variant = "dark">
-                <Navbar.Brand>Kaiiisaka</Navbar.Brand>
+                <Container>
+                <Navbar.Brand href='/'>Kaiiisaka</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id = "responsive-navbar-nav">
                     <Nav className="mr-auto">
@@ -19,8 +31,9 @@ const NavBar = () => {
 
                     </Nav>
                 </Navbar.Collapse>
+                </Container>
             </Navbar>
-        </div>
+        </Styles>
     );
 };
 

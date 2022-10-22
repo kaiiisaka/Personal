@@ -1,5 +1,5 @@
 import React from 'react';
-import {Carousel} from "react-bootstrap";
+import {Carousel, Container} from "react-bootstrap";
 import Bo from "./pictures/Bo.jpg"
 import Pop from "./pictures/Pop2.jpg"
 import Dino from "./pictures/Dino.jpg"
@@ -7,8 +7,9 @@ import classes from "./slider.module.css";
 
 const Slider = () => {
     return (
+        <Container>
         <Carousel className={classes.homeSlider}>
-            <Carousel.Item>
+            <Carousel.Item style={{'height': '500px'}}>
                 <img
                     className="d-block w-100"
                     src = {Pop}
@@ -19,7 +20,7 @@ const Slider = () => {
                     <p style={{'color': 'black'}}>My fav project</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item >
+            <Carousel.Item style={{'height': '500px'}}>
                 <img
                     className="d-block w-100"
                     src = {Dino}
@@ -30,7 +31,7 @@ const Slider = () => {
                     <p>Might will imbalance collection</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item >
+            <Carousel.Item style={{'height': '500px'}}>
                 <img
                     className="d-block w-100"
                     src = {Bo}
@@ -38,10 +39,11 @@ const Slider = () => {
                 />
                 <Carousel.Caption>
                     <h3>ᏰᎧᎶᎧᏂ'Ꮥ</h3>
-                    <p style={{'color': 'black'}}>Just cool art</p>
+                    <p >Just cool art</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
+        </Container>
     );
 };
 
