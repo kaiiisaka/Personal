@@ -4,6 +4,7 @@ import {Nav} from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {Container, Row, Col} from "react-bootstrap";
+import snake from '../components/snake/snake.jpg'
 
 const Projects = () => {
 
@@ -16,7 +17,7 @@ const Projects = () => {
                 <Row>
                     <Col>
                         <Card style={{ width: '18rem', padding: '20px'}}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Img variant="top" src={snake} />
                             <Card.Body>
                                 <Card.Title>Snake</Card.Title>
                                 <Card.Text>

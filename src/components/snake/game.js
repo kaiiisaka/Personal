@@ -4,9 +4,6 @@ let blockSize = 20;
 let cols = 30;
 let rows = 20;
 
-let appleAudio;
-let gameOverAudio;
-
 let snakeX = 0;
 let snakeY = 0;
 let tail = [];
@@ -55,7 +52,7 @@ function update (){
 
     createText(`Score: ${score}`, 30, 40)
 
-    createRect(foodX, foodY, blockSize, 'lime');
+    createRect(foodX, foodY, blockSize, blockSize, "lime");
 
     if (snakeX == foodX && snakeY == foodY){
         tail.push([foodX, foodY]);
@@ -75,10 +72,10 @@ function update (){
         snakeX += velocityX * blockSize;
         snakeY += velocityY * blockSize;
 
-        createRect(snakeX, snakeY, blockSize, 'orange');
+        createRect(snakeX, snakeY, blockSize, blockSize, "orange");
 
         for (let i = 0; i < tail.length; i++){
-           createRect(tail[i][0], tail[i][1], blockSize, 'lime');
+           createRect(tail[i][0], tail[i][1], blockSize, blockSize, 'lime');
         }
 
         // удар об стену
@@ -97,13 +94,45 @@ function update (){
 
 }
 
-function foodPlace (){}
+function foodPlace (){
+    foodX = Math.floor(Math.random() * cols) * blockSize;
+    foodY = Math.floor(Math.random() * rows) * blockSize;
+}
 
-function changeDirection(){}
+function changeDirection(e){
+    if (e.code == "ArrowUp"){
+        velocityX = 0;
+        velocityY = -1;
+    } else if (e.code == "ArrowDown"){
+        velocityX = 0;
+        velocityY = 1;
+    } else if (e.code == "ArrowLeft"){
+        velocityX = -1;
+        velocityY = 0;
+    } else if (e.code == "ArrowRight"){
+        velocityX = 1;
+        velocityY = 0;
+    }
+}
 
-function gameOverEvent(){}
+function gameOverEvent(){
+    gameOver = true;
+    tail = [];
+    snakeX = 0;
+    snakeY = 0;
+    velocityX = 1;
+    velocityY = 0;
+}
 
-function createRect(){}
+function createRect(x, y, width, height, color = "black"){
+    context.fillStyle = color;
+    context.fillRect(x, y, width, height);
+}
 
-function createText(){}
+function createText(text, x, y, textAlign = "start", fontSize = 20){
+    context.fillStyle = 'lime';
+    context.font = `${fontSize}px Roboto Mono`;
+    context.textAlign = textAlign;
+    context.fillText(text, x, y);
+}
 
