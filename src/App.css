@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -8,21 +14,6 @@
 }
 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 .Snake {
   background-color: black;
   padding-top: 2rem;
@@ -30,4 +21,33 @@
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto Mono', monospace;
+}
+
+.NavBar {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  padding: 0 15px;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+}
+
+.Home{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#containerhome{
+  text-align: left;
+
+}
+
+.AppRouter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
