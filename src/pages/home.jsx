@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from "../components/UI/slider/slider";
 import {Container} from "react-bootstrap";
 import Accordion1 from "../components/UI/accordion/accordion";
+import Jumbotron from "../components/UI/jumbotron/jumbotron";
 
 const Home = () => {
     return (
@@ -16,8 +17,10 @@ const Home = () => {
                 </p>
                 <Accordion1 />
             </Container>
-
             <Slider/>
+            <Container>
+            <Jumbotron />
+            </Container>
         </div>
     );
 };

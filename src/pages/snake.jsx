@@ -1,5 +1,5 @@
 import React from "react";
-import game from '../components/snake/game.js'
+import game from '../projects/snake/game.js'
 import styled from "styled-components";
 
 const SnakeWrapper  = styled.div`

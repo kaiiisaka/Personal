@@ -23,8 +23,8 @@ const NavBar = () => {
     return (
         <Styles>
             <Navbar collapseOnSelect expand = "lg" bg = "dark" variant = "dark">
-                <Container>
-                <Navbar.Brand href='/' style={{alignItems: 'first'}}>Kaiiisaka</Navbar.Brand>
+
+                <Navbar.Brand href='/' style={{alignItems: 'first', marginLeft: '10px'}}>Kaiiisaka</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id = "responsive-navbar-nav">
                     <Nav className="mr-auto">
@@ -33,7 +33,7 @@ const NavBar = () => {
                         <Nav.Link> <Link to="/about">About</Link> </Nav.Link>
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
-                       <Nav>
+                       <Nav style={{marginRight: '10px'}}>
                            <a href='https://github.com/kaiiisaka' style={{paddingRight: '5px'}}>
                                <img
                                    src = {git}
@@ -66,7 +66,7 @@ const NavBar = () => {
                        </Nav>
                     </Navbar.Collapse>
                 </Navbar.Collapse>
-                </Container>
+
             </Navbar>
         </Styles>
     );

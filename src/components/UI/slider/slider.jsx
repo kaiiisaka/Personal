@@ -3,12 +3,12 @@ import {Carousel, Container} from "react-bootstrap";
 import Bo from "./pictures/Bo.jpg"
 import Pop from "./pictures/Pop2.jpg"
 import Dino from "./pictures/Dino.jpg"
-import classes from "./slider.module.css";
+
 
 const Slider = () => {
     return (
         <Container style={{padding: '1rem'}}>
-        <Carousel className={classes.homeSlider}>
+        <Carousel className='homeSlider' style={{'height': '500px'}}>
             <Carousel.Item style={{'height': '500px'}}>
                 <a href='https://twitter.com/pop_headz'>
                     <img
