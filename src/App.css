@@ -62,3 +62,9 @@
 .homeSlider{
   height: 500px;
 }
+
+.projList {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: space-between;
+}

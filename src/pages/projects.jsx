@@ -9,10 +9,10 @@ const Projects = () => {
     return (
         <div>
             <h1>There is my projects with any programming languages</h1>
-            <Container style={{paddingTop: '2rem', paddingBottom: '2rem'}}>
-                <Row>
+            <Container className='projList'>
+                <Row style={{height: '25rem'}}>
                     <Col>
-                        <Card style={{ width: '18rem', padding: '20px'}}>
+                        <Card style={{ width: '18rem',height: '23rem', padding: '20px'}}>
                             <Card.Img variant="top" src={site} />
                             <Card.Body>
                                 <Card.Title>Site from Guide</Card.Title>
@@ -26,7 +26,7 @@ const Projects = () => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card style={{ width: '18rem', padding: '20px'}}>
+                        <Card style={{ width: '18rem', height: '23rem', padding: '20px'}}>
                             <Card.Img variant="top" src={snake} />
                             <Card.Body>
                                 <Card.Title>Snake</Card.Title>
@@ -39,7 +39,19 @@ const Projects = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-
+                    <Col>
+                        <Card style={{ width: '18rem', height: '23rem', padding: '20px'}}>
+                            <Card.Body style={{padding: '50px'}}>
+                                <Card.Title>Airport</Card.Title>
+                                <Card.Text>
+                                    My C++ project, but right now I can't find files for demo...
+                                </Card.Text>
+                                <Button variant="primary" disabled>
+                                    Not yet
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
                 </Row>
             </Container>
         </div>
