@@ -21,6 +21,7 @@
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto Mono', monospace;
+  min-height: 96vh;
 }
 
 .NavBar {
@@ -37,13 +38,13 @@
 
 .Home{
   align-items: center;
+  justify-content: space-between;
   display: flex;
   flex-direction: column;
 }
 
 #containerhome{
   text-align: left;
-
 }
 
 .AppRouter {
@@ -67,4 +68,22 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
   justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  width: 300px;
+  height: 70px;
+  border: 2px solid black;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.content-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
