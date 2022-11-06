@@ -4,8 +4,9 @@ import styled from "styled-components";
 
 const SnakeWrapper  = styled.div`
   width: 100%;
-  height: 96vh;
+  height: calc(100vh - 170px);
   padding: 2rem;
+  margin-bottom: 0;
   background: black;
 `
 
