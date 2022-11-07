@@ -8,7 +8,17 @@ import axios from "axios";
 import {useFetching} from "../components/hooks/useFetching";
 import Loader from "../components/UI/loader/loader";
 import PostService from "../components/API/PostService";
-import button from "bootstrap/js/src/button";
+import styled, {keyframes} from "styled-components";
+import {shake} from "react-animations";
+import goblin from '../pictures/goblin.png'
+
+const bounceAnimation = keyframes`${shake}`;
+
+const BouncyDiv = styled.div`
+  &:hover{
+    animation: 1s ${bounceAnimation};
+  }
+`;
 
 const Home = () => {
 
@@ -54,6 +64,15 @@ const Home = () => {
                     ? <Loader/>
                     : <UserList users={users} title='Online users' />
                 }
+                <BouncyDiv>
+                    <div className='goblin'>
+                        <h2>Ебучая анимация весь день просрал</h2>
+                        <img
+                        src={goblin}
+                        height='300px'
+                        />
+                    </div>
+                </BouncyDiv>
             </Container>
         </div>
     );

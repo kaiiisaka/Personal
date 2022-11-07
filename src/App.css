@@ -89,3 +89,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.goblin {
+  display: block;
+}
