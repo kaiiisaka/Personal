@@ -5,11 +5,14 @@ import Accordion1 from "../components/UI/accordion/accordion";
 import Jumbotron from "../components/UI/jumbotron/jumbotron";
 import UserList from "../components/userList";
 import axios from "axios";
+import {useFetching} from "../components/hooks/useFetching";
+import Loader from "../components/UI/loader/loader";
+import PostService from "../components/API/PostService";
+import button from "bootstrap/js/src/button";
 
 const Home = () => {
 
     const [users, setUsers] = useState([]);
-    const [user, setUser] = useState({username: '', name: ''});
 
     useEffect(() => {
     getUsers();
@@ -20,6 +23,18 @@ const Home = () => {
         const response = await axios.get(usersURL);
         setUsers(response.data);
     }
+
+    const [fetchUsers, isUserLoading] = useFetching (async () => {
+        const response = PostService.getAll();
+        setUsers(response.data);
+    })
+
+    const reload = async () => {
+        const usersURL = 'https://jsonplaceholder.typicode.com/users'
+        const response = await axios.get(usersURL);
+        setUsers(response.data);
+    }
+
     return (
         <div>
             <h1 style={{'font-family': 'Roboto Mono'}}>Kaiiisaka's page</h1>
@@ -35,7 +50,10 @@ const Home = () => {
             <Slider/>
             <Container className="content-home">
             <Jumbotron />
-                <UserList users={users} title='Online users'/>
+                {isUserLoading
+                    ? <Loader/>
+                    : <UserList users={users} title='Online users' />
+                }
             </Container>
         </div>
     );
