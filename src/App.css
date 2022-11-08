@@ -43,7 +43,6 @@
 
 #containerhome{
   text-align: left;
-
 }
 
 .AppRouter {
@@ -90,6 +89,37 @@
   align-items: center;
 }
 
-.goblin {
+.apiWrapper{
+  display: flex;
+  flex-direction: row;
+  /*width: ;*/
+}
+
+.tiles{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1.6fr;
+  margin-left: 5px;
+}
+
+.tile1 {
   display: block;
+}
+
+.tile2{
+  display: block;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.tile3{
+  display: block;
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.tile4{
+  display: block;
+  grid-column-start: 2;
+  grid-row-start: 4;
 }
