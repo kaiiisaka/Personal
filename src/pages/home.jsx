@@ -17,24 +17,23 @@ const outLeftAnimation = keyframes `${fadeOutLeft}`
 const inLeftAnimation = keyframes `${fadeOutRight}`
 const pulseAnimation = keyframes`${pulse}`
 
+
+
 const PulseDiv = styled.div`
   &:hover{
     animation: 1s ${pulseAnimation};
   }
 `;
-
 const ShakeDiv = styled.div`
   &:hover{
     animation: 1s ${shakeAnimation};
   }
 `;
-
 const OutDiv = styled.div`
   &:hover{
     animation: 0.5s ${outLeftAnimation};
   }
 `;
-
 const InDiv = styled.div`
   &:hover{
     animation: 0.5s ${inLeftAnimation};
@@ -56,16 +55,11 @@ const Home = () => {
         setUsers(response.data);
     }
 
-    const [fetchUsers, isUserLoading] = useFetching (async () => {
+    const [fetchUsers, isUserLoading, userError] = useFetching (async () => {
         const response = PostService.getAll();
         setUsers(response.data);
     })
 
-    const reload = async () => {
-        const usersURL = 'https://jsonplaceholder.typicode.com/users'
-        const response = await axios.get(usersURL);
-        setUsers(response.data);
-    }
 
     return (
         <div>

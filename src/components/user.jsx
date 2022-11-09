@@ -1,7 +1,6 @@
 import React from 'react';
 
 const User = (props) => {
-    console.log(props)
     return (
         <div className='user'>
             <div className='user--content'>
