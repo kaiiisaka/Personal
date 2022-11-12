@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Nav, Navbar, Button, Container} from "react-bootstrap";
 import {Link} from "react-router-dom"
 import styled from 'styled-components'
@@ -6,6 +6,8 @@ import hh from '../navbar/hh.png'
 import tg from '../navbar/tg.svg'
 import gmail from '../navbar/gmail.png'
 import git from '../navbar/git.png'
+import axios from "axios";
+import WeatherItem from "../../weatherItem";
 
 const Styles = styled.div `
   a, .navbar-brand, .navbar-nav .nav-link{
@@ -19,6 +21,18 @@ const Styles = styled.div `
 `
 
 const NavBar = () => {
+
+    const [weatherInfo, setWeatherInfo] = useState({name: '', main: {}, weather: []})
+
+    useEffect(() => {
+        getWeather();
+    }, [])
+
+    const getWeather = async () => {
+        const URL = 'http://api.openweathermap.org/data/2.5/weather?id=498817&lang=ru&units=metric&appid=4378d2ffa56766ffdba00df78fbafcc6'
+        const response = await axios.get(URL)
+        setWeatherInfo(response.data);
+    }
 
     return (
         <Styles>
@@ -34,21 +48,22 @@ const NavBar = () => {
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                        <Nav style={{marginRight: '10px'}}>
-                           <a href='https://github.com/kaiiisaka' style={{paddingRight: '5px'}}>
+                           <WeatherItem weatherInfo = {weatherInfo}/>
+                           <a href='https://github.com/kaiiisaka' style={{marginRight: '5px'}}>
                                <img
                                    src = {git}
                                    alt = "Github"
                                    width='40px'
                                />
                            </a>
-                           <a style={{paddingRight: '5px'}} href='https://spb.hh.ru/resume/230cca09ff09c31eba0039ed1f3272776d364c'>
+                           <a style={{marginRight: '5px'}} href='https://spb.hh.ru/resume/230cca09ff09c31eba0039ed1f3272776d364c'>
                            <img
                                src = {hh}
                                alt = "HH"
                                width='40px'
                            />
                            </a>
-                           <a href='https://t.me/akaplease' style={{paddingRight: '6px'}}>
+                           <a href='https://t.me/akaplease' style={{marginRight: '6px'}}>
                                <img
                                    src = {tg}
                                    alt = "Telegram"

@@ -124,3 +124,10 @@
   grid-column-start: 2;
   grid-row-start: 4;
 }
+
+.WeatherItem{
+  /*background-color: #e9ecef;*/
+  width: fit-content;
+  color: #e9ecef;
+  margin-right: 20px;
+}
