@@ -12,24 +12,24 @@ constantly learning and mastering something new.
 
 During development, the following languages and technologies were involved:
 
-###`HTML`
+`HTML`
 
 Basic page markup, without HTML it is impossible to display in the browser.
 
-###`CSS`
+`CSS`
 
 All styles are written with CSS. SASS/SCSS not currently used.
 
-###`JavaScript`
+`JavaScript`
 
 Writing scripts, interacting with all objects on the page, creating interactivity on the site.
 
-###`React JS`
+`React JS`
 
 A JavaScript library that simplifies writing code and extends the capabilities of the language, 
 thanks to components such as hooks, virtual DOM, JSX, etc.
 
-###`Git`
+`Git`
 
 Version control system that allows you to quickly split and merge different versions of a project,
 as well as send and receive them from remote repositories
