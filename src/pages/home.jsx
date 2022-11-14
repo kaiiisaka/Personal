@@ -63,7 +63,7 @@ const Home = () => {
 
     return (
         <div>
-            <h1 style={{'font-family': 'Roboto Mono'}}>Kaiiisaka's page</h1>
+            <h1 style={{'font-family': 'Roboto Mono', marginTop: '2rem'}}>Kaiiisaka's page</h1>
             <Container id='containerhome'>
                 <p>
                     Hi! I'm kaiiisaka (real name - Aleksandr). I am a 4th year student at BSTU "VOENMEH"

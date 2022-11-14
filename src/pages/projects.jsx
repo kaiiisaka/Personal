@@ -8,7 +8,7 @@ import site from '../projects/site.jpg'
 const Projects = () => {
     return (
         <div>
-            <h1>There is my projects with any programming languages</h1>
+            <h1 style={{marginTop: '2rem'}}>There is my projects with any programming languages</h1>
             <Container className='projList'>
                 <Row style={{height: '25rem'}}>
                     <Col>

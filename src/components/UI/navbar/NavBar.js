@@ -49,21 +49,21 @@ const NavBar = () => {
                     <Navbar.Collapse className="justify-content-end">
                        <Nav style={{marginRight: '10px'}}>
                            <WeatherItem weatherInfo = {weatherInfo}/>
-                           <a href='https://github.com/kaiiisaka' style={{marginRight: '5px'}}>
+                           <a href='https://github.com/kaiiisaka' target = '_blank' style={{marginRight: '5px'}}>
                                <img
                                    src = {git}
                                    alt = "Github"
                                    width='40px'
                                />
                            </a>
-                           <a style={{marginRight: '5px'}} href='https://spb.hh.ru/resume/230cca09ff09c31eba0039ed1f3272776d364c'>
+                           <a style={{marginRight: '5px'}} href='https://spb.hh.ru/resume/230cca09ff09c31eba0039ed1f3272776d364c' target = '_blank'>
                            <img
                                src = {hh}
                                alt = "HH"
                                width='40px'
                            />
                            </a>
-                           <a href='https://t.me/akaplease' style={{marginRight: '6px'}}>
+                           <a href='https://t.me/akaplease' target = '_blank' style={{marginRight: '6px'}}>
                                <img
                                    src = {tg}
                                    alt = "Telegram"
@@ -71,7 +71,7 @@ const NavBar = () => {
                                />
 
                            </a>
-                           <a href='mailto:panches2001@gmail.com' style={{paddingTop: '5px'}}>
+                           <a href='mailto:panches2001@gmail.com' target = '_blank' style={{paddingTop: '5px'}}>
                                <img
                                    src = {gmail}
                                    alt = "Gmail"

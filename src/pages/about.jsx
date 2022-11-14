@@ -7,7 +7,7 @@ const About = () => {
 
 
     return (
-        <div>
+        <div style={{marginLeft: '-50px', marginTop:'2rem'}}>
             <Container style={{'text-align': 'left', 'padding-left': '2rem', 'fontSize': 20}}>
                 <h1>About</h1>
                 <h3 >It's just for fun and learning</h3>

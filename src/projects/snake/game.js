@@ -101,9 +101,11 @@ function foodPlace (){
 
 function changeDirection(e){
     if (e.code == "ArrowUp"){
+        e.preventDefault()
         velocityX = 0;
         velocityY = -1;
     } else if (e.code == "ArrowDown"){
+        e.preventDefault()
         velocityX = 0;
         velocityY = 1;
     } else if (e.code == "ArrowLeft"){

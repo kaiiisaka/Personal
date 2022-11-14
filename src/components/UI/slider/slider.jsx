@@ -10,7 +10,7 @@ const Slider = () => {
         <Container style={{padding: '1rem'}}>
         <Carousel className='homeSlider' style={{'height': '500px'}}>
             <Carousel.Item style={{'height': '500px'}}>
-                <a href='https://twitter.com/pop_headz'>
+                <a href='https://twitter.com/pop_headz' target = '_blank'>
                     <img
                         className="d-block w-100"
                         src = {Pop}
@@ -23,7 +23,7 @@ const Slider = () => {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item style={{'height': '500px'}}>
-                <a href='https://twitter.com/Claynosaurz'>
+                <a href='https://twitter.com/Claynosaurz' target = '_blank'>
                 <img
                     className="d-block w-100"
                     src = {Dino}
@@ -36,7 +36,7 @@ const Slider = () => {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item style={{'height': '500px'}}>
-                <a href='https://twitter.com/BOGOHS_'>
+                <a href='https://twitter.com/BOGOHS_' target = '_blank'>
                 <img
                     className="d-block w-100"
                     src = {Bo}
